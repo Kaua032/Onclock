@@ -2,10 +2,10 @@
   /* backgrounds colors*/
   --bg1-color: #282B30;
   --bg2-color: #212328;
+  --bg3-color: #1E2124;
 
   /* secondary colors */
   --secondary-color: linear-gradient(270deg, #152438 0%, #182434 48.96%, #212933 100%);
-  --button-color: #1E2124;
 
   /* font colors */
   --white-: #fff
@@ -23,48 +23,72 @@ body, html{
   color: var(--white-);
 }
 
-.flex{
-  display: flex;
-}
-
 main{
   display: flex;
 }
 
 .tasks .tasks-header{
   background: linear-gradient(270deg, #152438 0%, #182434 48.96%, #212933 100%);
-
   padding: 13px 9px;
 }
 
-.tasks .toDoList{
+.tasks {
+  width: 350.44px;
+  min-height: 100vh;
+    
   background: var(--bg1-color);
-
-  padding: 29px 13px ;
 }
 
-.tasks .toDoList .task{
-  background: var(--button-color);
+.task {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 10px 13px;
+}
+
+.task-body {
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1rem;
+
+  background: var(--bg3-color);
   border-radius: 10px;
-
   padding: 21px 18px;
+}
 
+.tasks .task .task-body p{
+  font-size: 12pt;
+}
+
+.tasks .task .task-body input:checked {
+  background-color: #fff;
+}
+
+
+/*
+* CARD ACTIONS
+*/
+
+.completed p{
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+/*
+* CARD COLORS 
+*/
+
+
+.green {
+  border-left: 10px #14FF00 solid; 
+}
+
+.red {
   border-left: 10px #FF0000 solid; 
-} 
-
-.tasks .toDoList .task #check{
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
 }
 
-.tasks .toDoList .task #check{
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 35px;
-  width: 35px;
-  background-color: var(--bg1-color);
-}
+
