@@ -39,11 +39,47 @@
       
       <div class="actions-list">
         <ul>
-          <li><button onclick="active(this.id)" class="actions-list-btn" id="perfil-btn"></button></li>
-          <li><button onclick="active(this.id)" class="actions-list-btn" id="paint-btn"></button></li>
-          <li><button onclick="active(this.id)" class="actions-list-btn" id="settings-btn"></button></li>
-          <li><button onclick="active(this.id)" class="actions-list-btn" id="logout-btn"></button></li>
+          <li><button class="actions-list-btn" id="perfil-btn"></button></li>
+          <li><button class="actions-list-btn" id="paint-btn"></button></li>
+          <li><button class="actions-list-btn" id="settings-btn"></button></li>
+          <li><button class="actions-list-btn" id="logout-btn"></button></li>
         </ul>
+      </div>
+
+      <div id="paint-painel">
+        <div id="header-paint-painel">
+          <p>Colors</p>
+          <button name="paint-painel" onclick="exitPainel(this.name)" class="paint-painel-exit-btn"></button>
+        </div>
+        <div id="linguagens-bg-color">
+          <p>Linguagens</p>
+          <input id="linguagens-bg-color-input" value="#38BAD7" type="color">
+        </div>
+        <div id="matematica-bg-color">
+          <p>Matemática</p>
+          <input id="matematica-bg-color-input" value="#D73838" type="color">
+        </div>
+        <div id="natureza-bg-color">
+          <p>Natureza</p>
+          <input id="natureza-bg-color-input" value="#30970B" type="color">
+        </div>
+        <div id="humanas-bg-color">
+          <p>Humanas</p>
+          <input id="humanas-bg-color-input" value="#E08700" type="color">
+        </div>
+
+        <div id="change-colors-tasks">
+
+          <label id="label-done" for="done">
+            <input type="color" id="done">
+            <p>Completo</p>
+          </label>
+
+          <label id="label-not-done" for="not-done">
+            <input type="color" id="not-done">
+            <p>Incompleto</p>
+          </label>
+        </div>
       </div>
     </section>
   </main>
