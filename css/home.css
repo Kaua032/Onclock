@@ -182,6 +182,7 @@ main{
 
 .actions-list{
   width: 20%;
+  min-width: 22.5rem;
 
   position: fixed;
   bottom: 0;
