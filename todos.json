@@ -1,27 +1,22 @@
 [
     {
-        "title": "Estudar para prova",
-        "color": "red",
+        "title": "Estudar",
         "done": false
-    },
-    {
-        "title": "Estudar para prova",
-        "color": "blue",
+      },
+      {
+        "title": "Para",
         "done": false
-    },
-    {
-        "title": "Estudar para prova",
-        "color": "orange",
+      },
+      {
+        "title": "Prova",
         "done": false
-    },
-    {
-        "title": "Estudar para prova",
-        "color": "blue",
+      },
+      {
+        "title": "Sim",
         "done": false
-    },
-    {
-        "title": "Estudar para prova",
-        "color": "green",
+      },
+      {
+        "title": "estudar para prova",
         "done": false
-    }
+      }
 ]

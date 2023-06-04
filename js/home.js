@@ -2,8 +2,8 @@ const todoList = document.querySelector(".todo-list");
 const todoCreateDiv = document.querySelector(".todo-create-container");
 const inputTask = document.querySelector(".todo-create-input");
 const addTaskBtn = document.querySelector(".todo-create-button");
-
 const paintBtn = document.getElementById("paint-btn")
+
 
 const todos = [
   {
@@ -73,7 +73,7 @@ function generateTodo() {
     todos.map((value, index) => {
       todoList.innerHTML += `
         <div class="task ${value.done ? "completed" : "uncompleted"}">
-          <label class="task-body ${value.done ? "green" : "red"}">
+          <label class="task-body">
           <input type="checkbox" ${value.done ? "checked" : ""}>
             <p>
              ${value.title}
@@ -103,4 +103,5 @@ function active(id){
 }
 
 paintBtn.addEventListener('click', () =>{
+
 })
