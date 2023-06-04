@@ -5,6 +5,14 @@
   --bg3-color: #1E2124;
   --bg4-color: #1A1A1A;
   --bg4--color-bar: #333944;
+  --bg5--color-paint-header: #24272B;
+  --bg6--linguagens: #38BAD7;
+  --bg7--matematica: #D73838;
+  --bg8--natureza: #30970B;
+  --bg9--humanas: #E08700;
+  --bg10--completo: #14FF00;
+  --bg11--incompleto: #FF0000;
+
 
   /* secondary colors */
   --secondary-color: linear-gradient(270deg, #152438 0%, #182434 48.96%, #212933 100%);
@@ -232,4 +240,102 @@ main{
 }
 #logout-btn{
   background-image: url('../assets/icons/logout\ btn.svg')
+}
+
+#paint-painel{
+  position: fixed;
+  height: 380px;
+  width: 20%;
+
+  bottom: 73px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+
+  background-color: var(--bg1-color);
+}
+
+#paint-painel div{
+  height: 50px;
+  width: 90%;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  border-radius: 5px;
+  padding: 5px;
+}
+
+
+#paint-painel #header-paint-painel{
+  width: 100%;
+  height: 30px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 65%;
+
+  background-color: var(--bg5--color-paint-header);
+}
+
+.paint-painel-exit-btn{
+  width: 25px;
+  height: 32.14px;
+  
+  background-image: url(../assets/icons/exit\ btn.svg);
+  background-color: var(--bg5--color-paint-header);
+  border: none;
+
+  cursor: pointer;
+}
+
+#paint-painel div p{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+}
+
+#linguagens-bg-color{
+  background-color: var(--bg6--linguagens);
+}
+
+#matematica-bg-color{
+  background-color: var(--bg7--matematica);
+}
+
+#natureza-bg-color{
+  background-color: var(--bg8--natureza);
+}
+
+#humanas-bg-color{
+  background-color: var(--bg9--humanas);
+}
+
+
+#done, #not-done{
+  display: none;
+}
+
+#label-done, #label-not-done{
+  width: 150px;
+  height: 50px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  
+  border-radius: 5px;
+}
+
+#label-done{
+  background-color: var(--bg10--completo);
+}
+#label-not-done{
+  background-color: var(--bg11--incompleto);
 }
