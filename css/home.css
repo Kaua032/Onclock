@@ -4,6 +4,7 @@
   --bg2-color: #212328;
   --bg3-color: #1E2124;
   --bg4-color: #1A1A1A;
+  --bg4--color-bar: #333944;
 
   /* secondary colors */
   --secondary-color: linear-gradient(270deg, #152438 0%, #182434 48.96%, #212933 100%);
@@ -34,9 +35,13 @@ main{
 }
 
 .tasks {
-  width: 21.9025rem;
+  width: 20%;
   min-height: 100vh;
-    
+  min-width: 22.5rem;
+  
+  display: flex;
+  flex-direction: column;
+
   background: var(--bg1-color);
 }
 
@@ -175,3 +180,54 @@ main{
   }
 }
 
+.actions-list{
+  width: 20%;
+
+  position: fixed;
+  bottom: 0;
+  display: flex;
+
+  background-color: var(--bg4--color-bar);
+  padding: 5px;
+}
+.actions-list ul{
+  width: 100%;
+
+  display: flex;
+  justify-content: space-around;
+}
+.actions-list ul li::marker{
+  display: none;
+}
+.actions-list ul li button{
+  width: 5rem;
+  height: 5rem;
+
+  background-color: var(--bg4--color-bar);
+  border: none;
+
+  cursor: pointer;
+}
+#perfil-btn, #paint-btn, #settings-btn, #logout-btn{
+  background-size: 7rem;
+  background-repeat: no-repeat;
+  background-position: center center;
+
+  border-radius: 50%;
+}
+#perfil-btn:hover, #paint-btn:hover, #settings-btn:hover, #logout-btn:hover{
+  background-color: var(--bg1-color);
+}
+
+#perfil-btn{
+  background-image: url('../assets/icons/perfil\ btn.svg')
+}
+#paint-btn{
+  background-image: url('../assets/icons/paint\ btn.svg')
+}
+#settings-btn{
+  background-image: url('../assets/icons/settings\ btn.svg')
+}
+#logout-btn{
+  background-image: url('../assets/icons/logout\ btn.svg')
+}

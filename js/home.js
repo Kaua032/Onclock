@@ -3,6 +3,8 @@ const todoCreateDiv = document.querySelector(".todo-create-container");
 const inputTask = document.querySelector(".todo-create-input");
 const addTaskBtn = document.querySelector(".todo-create-button");
 
+const paintBtn = document.getElementById("paint-btn")
+
 const todos = [
   {
     "title": "Estudar",
@@ -94,3 +96,11 @@ function createTodo() {
     inputTask.value = "";
     generateTodo();
 }
+
+
+function active(id){
+  document.getElementById(id).style.backgroundColor = 'var(--bg1-color)'
+}
+
+paintBtn.addEventListener('click', () =>{
+})
