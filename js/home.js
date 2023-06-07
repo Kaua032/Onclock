@@ -22,6 +22,10 @@ const bgHumanas = document.getElementById('humanas-bg-color')
 const bgDone = document.getElementById('label-done')
 const bgNotDone = document.getElementById('label-not-done')
 
+/*Border Colors Tasks */
+const completedAll = document.querySelectorAll('.completed .task-body')
+const uncompletedAll = document.querySelectorAll('.uncompleted .task-body')
+
 const todos = [
   {
     "title": "Estudar",
@@ -147,8 +151,14 @@ humanasColorInput.addEventListener('change', () => {
   bgHumanas.style.backgroundColor = humanasColorInput.value
 })
 
+
+
+
 doneInput.addEventListener('change', () => {
   bgDone.style.backgroundColor = doneInput.value
+  completedAll.forEach((element) => {
+    element.style.borderColor = doneInput.value
+  });
 })
 
 notDoneInput.addEventListener('change', () => {
