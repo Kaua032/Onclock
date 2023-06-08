@@ -39,8 +39,14 @@ main{
 }
 
 .tasks .tasks-header{
-  background: linear-gradient(270deg, #152438 0%, #182434 48.96%, #212933 100%);
+  position: fixed;
+  
+  width: 20%;
+  min-width: 22.5rem;
   padding: 13px 9px;
+
+  background: linear-gradient(270deg, #152438 0%, #182434 48.96%, #212933 100%);
+
 }
 
 .tasks {
@@ -55,6 +61,7 @@ main{
 }
 
 .todo-create {
+  margin-top: 4rem;
   width: 100%;
   padding: 10px 13px;
 }
@@ -246,6 +253,7 @@ main{
   position: fixed;
   height: 380px;
   width: 20%;
+  min-width: 22.5rem;
 
   bottom: 73px;
   display: none;
@@ -296,7 +304,7 @@ main{
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 17px;
   line-height: 24px;
 }
 
@@ -322,7 +330,7 @@ main{
 }
 
 #label-done, #label-not-done{
-  width: 150px;
+  width: 45%;
   height: 50px;
   
   display: flex;
