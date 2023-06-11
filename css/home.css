@@ -57,7 +57,7 @@ main header .tasks-header{
 
   display: flex;
   align-items: center;
-
+  padding-left: 20px;
 }
 
 main header .classes-header{
@@ -65,8 +65,8 @@ main header .classes-header{
 
   display: flex;
   align-items: center;
-
-
+  justify-content: space-between;
+  padding-right: 15px;
 }
 main header .rank-header{
   width: 20%;
