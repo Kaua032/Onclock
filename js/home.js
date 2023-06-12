@@ -25,7 +25,7 @@ const headerRecentDate = document.getElementById('recentDate')
 
 const day = new Date().getDate();
 const weekDay = new Date().getDay();
-const month = new Date().getMonth();
+let month = new Date().getMonth();
 
 const monthName = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
 const weekDayName = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
@@ -161,122 +161,35 @@ humanasColorInput.addEventListener('change', () => {
   bgHumanas.style.backgroundColor = humanasColorInput.value;
 });
 
+let monthDays = fetch('../months.json').then(function(response){return response.json()}).then(function(object){return object  })
 
 
-
+console.log(monthDays)
 
 window.addEventListener('DOMContentLoaded', () =>{
-  const weekDays = [];
-  let recentNumberDay = day;
-  recentWeek.innerHTML = ""
-  headerRecentDate.innerHTML += `${new Date().getDate()} ${monthName[new Date().getMonth()]} ${new Date().getFullYear()}`
 
-  if(weekDay > 0){
-    for(let i = weekDay; i > 0; i-- ){
-      if(i == weekDay){
-        recentNumberDay -= weekDay;
-        week.push(recentNumberDay);
-      }
-      recentNumberDay++;
-      week.push(recentNumberDay);
-    }
-    for(let i = weekDay; i < 6; i++){
-      recentNumberDay = day;
-      week.push(recentNumberDay + i);
-    }
-  }
+  headerRecentDate.innerHTML = `${new Date().getDate()} ${monthName[new Date().getMonth()]} ${new Date().getFullYear()}`
 
-
-  for(let i = 0; i < 7; i++){
-    if( i == weekDay && day == week[i]){
-      recentWeek.innerHTML += `
-    <div class="weekDay" style="background-color: #00286A;">
-      <p>${weekDayName[i]}</p>
-      <p class="numberDay">${week[i]}</p>
-      <p>${monthName[month]}</p>
-    </div>
-    `;
-    }
-    else{
-      recentWeek.innerHTML += `
-      <div class="weekDay">
-        <p>${weekDayName[i]}</p>
-        <p class="numberDay">${week[i]}</p>
-        <p>${monthName[month]}</p>
-      </div>
-      `;
-    }
-  }
+  
   recentWeek.innerHTML += `
-    <div id="buttons">
-      <button id="cima" onclick='previous()'></button>
-      <button id="baixo" onclick='next()'></button>
-    </div>
-  `;
-
+  <div class="weekDay">
+  <p>Maio</p>
+  <p class="numberDay">21</p>
+  <p>Dom</p>
+  </div>
+  `
+  recentWeek.innerHTML += `
+  <div id="buttons">
+    <button id="cima"></button>
+    <button id="baixo"></button>
+  </div>
+`
 });
 
 function previous(){
-  recentWeek.innerHTML = ""
-  for(let i = 0; i < 7; i++){
-    if(i == weekDay && day == week[i] - 7){
-      recentWeek.innerHTML += `
-    <div class="weekDay" style="background-color: #00286A;">
-      <p>${weekDayName[i]}</p>
-      <p class="numberDay">${week[i] -= 7}</p>
-      <p>${monthName[month]}</p>
-    </div>
-    `;
-    }
-    else{
-        week[i] -= 7
-        recentWeek.innerHTML += `
-        <div class="weekDay">
-          <p>${weekDayName[i]}</p>
-          <p class="numberDay">${week[i]}</p>
-          <p>${monthName[month]}</p>
-        </div>
-        `;
-    }
-  }
-  console.log(week)
-  recentWeek.innerHTML += `
-    <div id="buttons">
-      <button id="cima" onclick='previous()'></button>
-      <button id="baixo" onclick='next()'></button>
-    </div>
-  `;
+ 
 }
 
-
-
-
 function next(){
-  recentWeek.innerHTML = ""
-  for(let i = 0; i < 7; i++){
-    if(i == weekDay && day == week[i] + 7){
-      recentWeek.innerHTML += `
-    <div class="weekDay" style="background-color: #00286A;">
-      <p>${weekDayName[i]}</p>
-      <p class="numberDay">${week[i] += 7}</p>
-      <p>${monthName[month]}</p>
-    </div>
-    `;
-    }
-    else{
-      recentWeek.innerHTML += `
-      <div class="weekDay">
-        <p>${weekDayName[i]}</p>
-        <p class="numberDay">${week[i] += 7}</p>
-        <p>${monthName[month]}</p>
-      </div>
-      `;
-    }
-  }
-  recentWeek.innerHTML += `
-    <div id="buttons">
-      <button id="cima" onclick='previous()'></button>
-      <button id="baixo" onclick='next()'></button>
-    </div>
-  `;
+  
 }
