@@ -6,8 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/home.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+
 
   <title>OnClock</title>
 </head>
@@ -51,7 +52,6 @@
         <ul>
           <li><button class="actions-list-btn" id="perfil-btn"></button></li>
           <li><button class="actions-list-btn" id="paint-btn"></button></li>
-          <li><button class="actions-list-btn" id="settings-btn"></button></li>
           <li><button class="actions-list-btn" id="logout-btn"></button></li>
         </ul>
       </div>
@@ -76,6 +76,31 @@
         <div id="humanas-bg-color">
           <p>Humanas</p>
           <input id="humanas-bg-color-input" value="#E08700" type="color">
+        </div>
+      </div>
+
+      <div id="profile-painel">
+        <div id="header-profile-painel">
+          <p>Colors</p>
+          <button name="profile-painel" onclick="exitPainel(this.name)" class="paint-painel-exit-btn"></button>
+        </div>
+        <div id="perfil">
+          <img src="../assets/icons/User.svg" alt="">
+        </div>
+        <div id="nameUser">
+          <h2>Name</h2>
+        </div>
+        <div>
+          <h2>Email</h2>
+          <p class="profile-informations">Example@test.com</p>
+        </div>
+        <div>
+          <h2>Phone Number</h2>
+          <p class="profile-informations">+55 XX 9XXXX-XXXX</p>
+        </div>
+        <div>
+          <h2>Turma</h2>
+          <p class="profile-informations">3°ano E</p>
         </div>
       </div>
     </section>
