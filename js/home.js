@@ -4,6 +4,8 @@ const inputTask = document.querySelector(".todo-create-input");
 const addTaskBtn = document.querySelector(".todo-create-button");
 const paintBtn = document.getElementById("paint-btn");
 const paintPainel = document.getElementById('paint-painel');
+const perfilBtn = document.getElementById('perfil-btn');
+const profilePainel = document.getElementById('profile-painel');
 
 
 /*Inputs Variables Change Colors */
@@ -178,8 +180,24 @@ function createTodo() {
     generateTodo();
 };
 
+perfilBtn.addEventListener('click', () => {
+  paintPainel.style.display = "none";
+  paintBtn.style.backgroundColor = 'var(--bg4--color-bar)';
+
+  var displayStyle = window.getComputedStyle(profilePainel).display;
+  if (displayStyle === "none") {
+    profilePainel.style.display = "flex";
+    perfilBtn.style.backgroundColor = 'var(--bg1-color)';
+  } else if (displayStyle === "flex") {
+    profilePainel.style.display = "none";
+    perfilBtn.style.backgroundColor = 'var(--bg4--color-bar)';
+  }
+});
 
 paintBtn.addEventListener('click', () => {
+  profilePainel.style.display = "none";
+  perfilBtn.style.backgroundColor = 'var(--bg4--color-bar)';
+
   var displayStyle = window.getComputedStyle(paintPainel).display;
   if (displayStyle === "none") {
     paintPainel.style.display = "flex";

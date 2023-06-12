@@ -12,6 +12,7 @@
   --bg9--humanas: #E08700;
   --bg10--completo: #14FF00;
   --bg11--incompleto: #FF0000;
+  --bg12--header-profile: #191B1F;
 
 
   /* secondary colors */
@@ -260,7 +261,7 @@ main header .rank-header{
 
   border-radius: 50%;
 }
-#perfil-btn:hover, #paint-btn:hover, #settings-btn:hover, #logout-btn:hover{
+#perfil-btn:hover, #paint-btn:hover, #logout-btn:hover{
   background-color: var(--bg1-color);
 }
 
@@ -277,9 +278,9 @@ main header .rank-header{
   background-image: url('../assets/icons/logout\ btn.svg')
 }
 
-#paint-painel{
+#paint-painel, #profile-painel{
   position: fixed;
-  height: 380px;
+  height: 400px;
   width: 20%;
   min-width: 22.5rem;
 
@@ -287,7 +288,7 @@ main header .rank-header{
   display: none;
   flex-direction: column;
   align-items: center;
-  gap: 15px;
+  gap: 10px;
 
   background-color: var(--bg1-color);
 }
@@ -305,30 +306,35 @@ main header .rank-header{
 }
 
 
-#paint-painel #header-paint-painel{
+#paint-painel #header-paint-painel, #profile-painel #header-profile-painel{
   width: 100%;
   height: 30px;
 
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 65%;
-
+}
+#paint-painel #header-paint-painel{
   background-color: var(--bg5--color-paint-header);
+}
+#profile-painel #header-profile-painel{
+  background-color: var(--bg12--header-profile);
 }
 
 .paint-painel-exit-btn{
   width: 25px;
-  height: 32.14px;
+  height: 30px;
   
   background-image: url(../assets/icons/exit\ btn.svg);
-  background-color: var(--bg5--color-paint-header);
+  background-color: #ffffff00;
   border: none;
 
   cursor: pointer;
 }
 
-#paint-painel div p{
+#paint-painel div p, #profile-painel div p{
   font-family: 'Montserrat';
   font-style: normal;
   font-weight: 600;
@@ -375,6 +381,40 @@ main header .rank-header{
 #label-not-done{
   background-color: var(--bg11--incompleto);
 }
+#profile-painel div .profile-informations{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 275;
+  font-size: 15px;
+  line-height: 18px;
+  background: #36393E;
+  border-radius: 5px;
+  padding: 2.5px;
+}
+#profile-painel div{
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#profile-painel #perfil{
+  width: 130px;
+  height: 130px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #282B30;
+  box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.4);
+  border-radius: 100%;
+
+}
+#profile-painel #nameUser{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
 
 .classes{
   width: 60%;
@@ -382,5 +422,5 @@ main header .rank-header{
   display: flex;
   flex-direction: column;
 
-  background: #212328;
+  background: var(--bg2-color);
 }
