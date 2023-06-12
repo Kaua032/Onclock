@@ -26,8 +26,58 @@ const headerRecentDate = document.getElementById('recentDate')
 const day = new Date().getDate();
 const weekDay = new Date().getDay();
 let month = new Date().getMonth();
+const months = [
+  {
+      "monthName": "Janeiro",
+      "days": 31
+  },
+  {
+      "monthName": "Fevereiro",
+      "days": 28
+  },
+  {
+      "monthName": "Março",
+      "days": 31
+  },
+  {
+      "monthName": "Abril",
+      "days": 30
+  },
+  {
+      "monthName": "Maio",
+      "days": 31
+  },
+  {
+      "monthName": "Junho",
+      "days": 30
+  },
+  {
+      "monthName": "Julho",
+      "days": 31
+  },
+  {
+      "monthName": "Agosto",
+      "days": 31
+  },
+  {
+      "monthName": "Setembro",
+      "days": 30
+  },
+  {
+      "monthName": "Outubro",
+      "days": 31
+  },
+  {
+      "monthName": "Novembro",
+      "days": 30
+  },
+  {
+      "monthName": "Dezembro",
+      "days": 31
+      
+  }
 
-const monthName = ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro'];
+]
 const weekDayName = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
 const week = [];
 
@@ -160,36 +210,3 @@ naturezaColorInput.addEventListener('change', () => {
 humanasColorInput.addEventListener('change', () => {
   bgHumanas.style.backgroundColor = humanasColorInput.value;
 });
-
-let monthDays = fetch('../months.json').then(function(response){return response.json()}).then(function(object){return object  })
-
-
-console.log(monthDays)
-
-window.addEventListener('DOMContentLoaded', () =>{
-
-  headerRecentDate.innerHTML = `${new Date().getDate()} ${monthName[new Date().getMonth()]} ${new Date().getFullYear()}`
-
-  
-  recentWeek.innerHTML += `
-  <div class="weekDay">
-  <p>Maio</p>
-  <p class="numberDay">21</p>
-  <p>Dom</p>
-  </div>
-  `
-  recentWeek.innerHTML += `
-  <div id="buttons">
-    <button id="cima"></button>
-    <button id="baixo"></button>
-  </div>
-`
-});
-
-function previous(){
- 
-}
-
-function next(){
-  
-}
