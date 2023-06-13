@@ -6,8 +6,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="../css/home.css">
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
 
 
   <title>OnClock</title>
@@ -107,7 +109,44 @@
 
 
     <section class="classes">
-      
+      <div class="calender-display">
+        
+        <div class="wrapper">
+          <div class="header-wrapper">
+            <p class="current-date"></p>
+            <div class="icons">
+              <span id="prev" class="material-icons">chevron_left</span>
+              <span id="next" class="material-icons">chevron_right</span>
+            </div>
+          </div>
+          <div class="calender">
+            <ul class="weeks">
+              <li>Dom</li>
+              <li>Seg</li>
+              <li>Ter</li>
+              <li>Qua</li>
+              <li>Qui</li>
+              <li>Sex</li>
+              <li>Sab</li>
+            </ul>
+            <ul class="days">
+            </ul>
+          </div>
+        </div>
+
+        <div class="today">
+          <div class="today-header"> 
+            <div class="arcs">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+            
+
+            <p id="day"></p>
+            <p id="month"></p>
+        </div>
+      </div>
     </section>
 
     <section class="ranking">

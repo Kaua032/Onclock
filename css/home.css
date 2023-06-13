@@ -424,6 +424,120 @@ main header .rank-header{
 
   background: var(--bg2-color);
 }
+.classes .calender-display{
+  display: flex;
+  align-items: center;
+  margin-top: 66px;
+
+  padding: 5rem 0 5rem 5rem;
+}
+.classes .calender-display .wrapper{
+  background-color: var(--bg4--color-bar);
+  border-radius: 10px;
+  width: 450px;
+}
+.classes .calender-display .wrapper .header-wrapper{
+  display: flex;
+  align-items: center;
+  padding: 25px 30px 10px;
+  justify-content: space-between;
+}
+.classes .calender-display .wrapper .header-wrapper .current-date{
+  font-size: 1.45rem;
+  font-weight: 500;
+}
+.classes .calender-display .wrapper .header-wrapper .icons span{
+  height: 38px;
+  width: 38px;
+  font-size: 3rem;
+  margin: 0 1px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 38px;
+  border-radius: 50%;
+  background-color: var(--bg4--color-bar);
+}
+.classes .calender-display .wrapper .header-wrapper .icons span:hover{
+  opacity: 35%;
+}
+.classes .calender-display .wrapper .calender{
+  padding: 20px;
+}
+.classes .calender-display .wrapper .calender ul{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.classes .calender-display .wrapper .calender .weeks li{
+  font-weight: 500;
+}
+.classes .calender-display .wrapper .calender .days li{
+  cursor: pointer;
+  font-weight: 300;
+  height: 60px;
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+.classes .calender-display .wrapper .calender .days .inactive{
+  color: rgb(119, 119, 119);
+}
+
+.classes .calender-display .wrapper .calender .days .active{
+  background-color: #00286A;
+}
+.classes .calender-display .wrapper .calender .days .active:hover{
+  background-color: #001e4e;
+}
+.classes .calender-display .wrapper .calender .days li:hover{
+  background-color: #2a2f38;
+}
+.classes .calender-display .wrapper .calender ul li{
+  width: calc(100% / 7);
+}
+
+
+.classes .calender-display .today{
+  background-color: var(--bg4--color-bar);
+  width: 10rem;
+  height: 12rem;
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  border-radius: 10px;
+}
+.classes .calender-display .today .today-header{
+  background-color: #001e4e;
+  height: 3rem;
+  width: 100%;
+  border-radius: 10px 10px 0px 0px;
+}
+.classes .calender-display .today .today-header .arcs{
+
+  display: flex;
+  justify-content: space-around;
+}
+.classes .calender-display .today .today-header .arcs div{
+  margin-top: -8px  ;
+
+  width: 8px;
+  height: 20px;
+  border-radius: 5px;
+  background-color: white;
+}
+.classes .calender-display .today #day{
+  font-size: 5rem;
+}
+.classes .calender-display .today #month{
+  font-size: 2rem;
+}
 
 main .ranking{
   width: 20%;
