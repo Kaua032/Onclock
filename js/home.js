@@ -22,71 +22,18 @@ const bgHumanas = document.getElementById('humanas-bg-color');
 
 
 /* Calender Variables */ 
-const recentWeek = document.getElementById('recentWeek');
-const headerRecentDate = document.getElementById('recentDate')
+const currentDate = document.querySelector(".current-date");
+const daysTag = document.querySelector(".days");
+const prevNextIcon = document.querySelectorAll(".icons span")
+let date = new Date();
+let currYear = date.getFullYear();
+let currMonth = date.getMonth();
+const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
 
-const day = new Date().getDate();
-const weekDay = new Date().getDay();
-let month = new Date().getMonth();
-const months = [
-  {
-      "monthName": "Janeiro",
-      "days": 31
-  },
-  {
-      "monthName": "Fevereiro",
-      "days": 28
-  },
-  {
-      "monthName": "Março",
-      "days": 31
-  },
-  {
-      "monthName": "Abril",
-      "days": 30
-  },
-  {
-      "monthName": "Maio",
-      "days": 31
-  },
-  {
-      "monthName": "Junho",
-      "days": 30
-  },
-  {
-      "monthName": "Julho",
-      "days": 31
-  },
-  {
-      "monthName": "Agosto",
-      "days": 31
-  },
-  {
-      "monthName": "Setembro",
-      "days": 30
-  },
-  {
-      "monthName": "Outubro",
-      "days": 31
-  },
-  {
-      "monthName": "Novembro",
-      "days": 30
-  },
-  {
-      "monthName": "Dezembro",
-      "days": 31
-      
-  }
-
-]
-const weekDayName = ['Dom', 'Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sab'];
-const week = [];
 
 /*Border Colors Tasks */
 const completedAll = document.querySelectorAll('.completed .task-body');
 const uncompletedAll = document.querySelectorAll('.uncompleted .task-body');
-
 
 const todos = [
   {
@@ -227,4 +174,59 @@ naturezaColorInput.addEventListener('change', () => {
 
 humanasColorInput.addEventListener('change', () => {
   bgHumanas.style.backgroundColor = humanasColorInput.value;
+});
+
+
+
+
+
+
+
+const rederCalender = () => {
+  document.querySelector("#day").innerHTML = new Date().getDate()
+  document.querySelector("#month").innerHTML = months[new Date().getMonth()]
+
+
+  let firstDayofMonth = new Date(currYear, currMonth, 1).getDay()
+  let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
+  let lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth ).getDay();
+  console.log(lastDayofMonth)
+  let lastDateofLastMonth  = new Date(currYear, currMonth, 0).getDate()
+  let liTag = "";
+
+
+  for (let i = firstDayofMonth; i > 0; i--) {
+    liTag += `<li class="inactive" >${lastDateofLastMonth - i + 1}</li>`;
+  }
+
+  for (let i = 1; i <= lastDateofMonth; i++) {
+    let today = i === date.getDate() && currMonth === new Date().getMonth() && currYear === new Date().getFullYear() ? "active" : ""
+
+    liTag += `<li class="${today}">${i}</li>`;
+  }
+
+  for (let i = lastDayofMonth; i < 6; i++) {
+    liTag += `<li class="inactive" >${i - lastDayofMonth + 1}</li>`;
+  }
+
+
+  currentDate.innerHTML = `${months[currMonth]} ${currYear}`;
+  daysTag.innerHTML = liTag;
+}
+rederCalender();
+
+prevNextIcon.forEach(icon => {
+  icon.addEventListener("click", () =>{
+    currMonth = icon.id === "prev" ? currMonth - 1 : currMonth + 1; 
+
+    if(currMonth < 0 || currMonth > 11) {
+      date = new Date(currYear, currMonth);
+      currYear = date.getFullYear();
+      currMonth = date.getMonth();
+    }
+    else{
+      date = new Date();
+    }
+    rederCalender();
+  });
 });
