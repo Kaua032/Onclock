@@ -424,3 +424,80 @@ main header .rank-header{
 
   background: var(--bg2-color);
 }
+
+main .ranking{
+  width: 20%;
+  background-color: #282B30;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+
+  min-height: 100vh;
+  min-width: 22.5rem;
+}
+
+main .ranking .leader{
+  margin-top: 65px;
+  margin-left: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+main .ranking .profile-ranking{
+  margin-left: 30px;
+
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+main .ranking .profile-ranking img{
+  padding-top: 10px;
+  padding-right: 10px;
+}
+
+.name span{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+  
+  color: #EBC351;
+}
+
+.profile-ranking .ranking-names .name span{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+
+  color: #fff;
+}
+
+.name h5{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 17px;
+}
+
+main .ranking .name{
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+
+  margin-top: 10px;
+}
+
+main .ranking .ranking-names{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 5px;
+}
