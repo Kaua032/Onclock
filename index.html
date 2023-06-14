@@ -4,9 +4,216 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="./assets/icons/logo.svg" />
+  <link rel="stylesheet" href="./css/home.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
+  <link rel="icon" href="./assets/icons/logo.svg">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+
   <title>OnClock</title>
 </head>
 <body>
+  <main>
+    <header>
+      <div class="tasks-header">
+        <h2 id="tasks-title">Lista de Tarefas</h2>
+        <span id="icon-tasks" class="material-symbols-outlined">menu</span>
+      </div>
+      <div class="classes-header">
+        <h2>Horários</h2>
+        <h2 id="recentDate"></h2>
+      </div>
+      <div class="rank-header">
+        <h2>Classificações</h2>
+        <span id="icon-ranking" class="material-symbols-outlined">menu</span>
+      </div>
+    </header>
+
+    <section id="tasks" class="tasks">
+
+      <div class="todo-create">
+        <div class="todo-create-container" data-open="false">
+          <div class="todo-create-header">
+            <img src="./assets/icons/add task btn.svg" alt="todo create">
+            <h3>Create new task</h3>
+          </div>
+
+          <div class="todo-create-body">
+            <input type="text" class="todo-create-input" placeholder="Title">
+            <button class="todo-create-button">Create</button>
+          </div>
+        </div>
+   
+      </div>
+      
+      <div class="todo-list" id="todo-list">
+       
+      </div>
+      
+      <div class="actions-list">
+        <ul>
+          <li><button class="actions-list-btn" id="perfil-btn"></button></li>
+          <li><button class="actions-list-btn" id="paint-btn"></button></li>
+          <li><button class="actions-list-btn" id="logout-btn"></button></li>
+        </ul>
+      </div>
+
+      <div id="paint-painel">
+        <div id="header-paint-painel">
+          <p>Colors</p>
+          <button name="paint-painel" onclick="exitPainel(this.name)" class="paint-painel-exit-btn"></button>
+        </div>
+        <div id="linguagens-bg-color">
+          <p>Linguagens</p>
+          <input id="linguagens-bg-color-input" value="#38BAD7" type="color">
+        </div>
+        <div id="matematica-bg-color">
+          <p>Matemática</p>
+          <input id="matematica-bg-color-input" value="#D73838" type="color">
+        </div>
+        <div id="natureza-bg-color">
+          <p>Natureza</p>
+          <input id="natureza-bg-color-input" value="#30970B" type="color">
+        </div>
+        <div id="humanas-bg-color">
+          <p>Humanas</p>
+          <input id="humanas-bg-color-input" value="#E08700" type="color">
+        </div>
+      </div>
+
+      <div id="profile-painel">
+        <div id="header-profile-painel">
+          <p>Profile</p>
+          <button name="profile-painel" onclick="exitPainel(this.name)" class="paint-painel-exit-btn"></button>
+        </div>
+        <div id="perfil">
+          <img src="./assets/icons/User.svg" alt="">
+        </div>
+        <div id="nameUser">
+          <h2>Name</h2>
+        </div>
+        <div>
+          <h2>Email</h2>
+          <p class="profile-informations">Example@test.com</p>
+        </div>
+        <div>
+          <h2>Phone Number</h2>
+          <p class="profile-informations">+55 XX 9XXXX-XXXX</p>
+        </div>
+        <div>
+          <h2>Turma</h2>
+          <p class="profile-informations">3°ano E</p>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="classes">
+      <div class="calender-display">
+        
+        <div class="wrapper">
+          <div class="header-wrapper">
+            <p class="current-date"></p>
+            <div class="icons">
+              <span id="prev" class="material-icons">chevron_left</span>
+              <span id="next" class="material-icons">chevron_right</span>
+            </div>
+          </div>
+          <div class="calender">
+            <ul class="weeks">
+              <li>Dom</li>
+              <li>Seg</li>
+              <li>Ter</li>
+              <li>Qua</li>
+              <li>Qui</li>
+              <li>Sex</li>
+              <li>Sab</li>
+            </ul>
+            <ul class="days">
+            </ul>
+          </div>
+        </div>
+
+        <div class="today">
+          <div class="today-header"> 
+            <div class="arcs">
+              <div></div>
+              <div></div>
+            </div>
+          </div>
+            
+
+            <p id="day"></p>
+            <p id="month"></p>
+        </div>
+      </div>
+      <div id="lessons" class="lessons">
+        
+      </div>
+    </section>
+
+    <section id="rank" class="ranking">
+      <div class="leader">
+        <img src="./assets/img/Leaser person.png" alt="">
+
+        <div class="ranking-names">
+          <div class="name">
+            <span>Name</span>
+
+            <h5>3º E</h5>
+          </div>
+
+          <p>Score: 999</p>
+        </div>
+      </div>
+
+      <div class="profile-ranking">
+        <img src="./assets/img/Group 2.png" alt="">
+
+        <div class="ranking-names">
+          <div class="name">
+            <span>Name</span>
+
+            <h5>3º E</h5>
+          </div>
+
+          <p>Score: 998</p>
+        </div>
+      </div>
+
+      <div class="profile-ranking">
+        <img src="./assets/img/Group 2.png" alt="">
+
+        <div class="ranking-names">
+          <div class="name">
+            <span>Name</span>
+
+            <h5>3º E</h5>
+          </div>
+
+          <p>Score: 997</p>
+        </div>
+      </div>
+
+      <div class="profile-ranking">
+        <img src="./assets/img/Group 2.png" alt="">
+
+        <div class="ranking-names">
+          <div class="name">
+            <span>Name</span>
+
+            <h5>3º E</h5>
+          </div>
+
+          <p>Score: 996</p>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script src="./js/home.js"></script>
 </body>
 </html>

@@ -26,6 +26,12 @@ const bgHumanas = document.getElementById('humanas-bg-color');
 const currentDate = document.querySelector(".current-date");
 const daysTag = document.querySelector(".days");
 const prevNextIcon = document.querySelectorAll(".icons span")
+
+window.addEventListener("DOMContentLoaded", () => {
+  if(!localStorage.getItem("token")) return window.location.href = "../pages/login.html"
+});
+
+
 let date = new Date();
 let currYear = date.getFullYear();
 let currMonth = date.getMonth();

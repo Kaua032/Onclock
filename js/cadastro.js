@@ -8,15 +8,19 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 console.log(schoolClass.value)
 
+window.addEventListener("DOMContentLoaded", () => {
+    if(localStorage.getItem("token")) return window.location.href = "../index.html";
+})
+
 registerBtn.addEventListener("click", () => {
     if(!name.value.trim() || !email.value.trim() || !password.value.trim() || !confirmPassword.value.trim() || schoolClass.value === "default")
-        return alert("Fill in all fields");
+        return alert("Preencha todos os campos");
 
     if (!emailRegex.test(email.value)) 
-        return alert("Invalid email");
+        return alert("Email inválido");
 
     if(password.value !== confirmPassword.value)
-        return alert("The passwords are different");
+        return alert("As senhas são diferentes");
 
-    return window.location.href = "../pages/home.html";
+    return window.location.href = "../pages/login.html";
 });
