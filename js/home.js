@@ -278,7 +278,7 @@ prevNextIcon.forEach(icon => {
 
 
 const fetchData = async () => {
-  await fetch("../classes.json").then((response) => response.json()).then((data) => {
+  await fetch("https://kaua032.github.io/Onclock/classes.json").then((response) => response.json()).then((data) => {
      data.map((value) => {
           lessonsAll.innerHTML +=`
           <div class="lesson ${value.materia}">
