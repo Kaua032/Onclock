@@ -1,0 +1,38 @@
+[
+    {
+        "materia":"mate",
+        "nomeMateria":"Matemática",
+        "title": "Análise Combinatória",
+        "horaInicio": "7:15",
+        "horaFinal": "9:15",
+        "sala": "16",
+        "description": "Nesta aula de Análise Combinatória, mergulharemos no fascinante mundo dos arranjos, permutações e combinações." 
+    },
+    {
+        "materia":"lingua",
+        "nomeMateria":"Linguagens",
+        "title": "Literatura Brasileira",
+        "horaInicio": "9:15",
+        "horaFinal": "10:15",
+        "sala": "11",
+        "description": "Nesta aula de Literatura Brasileira, convidamos você a mergulhar em um universo rico de palavras, sentimentos e reflexões." 
+    },
+    {
+        "materia":"natu",
+        "nomeMateria":"Natureza",
+        "title": "Campo Magnético",
+        "horaInicio": "10:45",
+        "horaFinal": "11:45",
+        "sala": "5",
+        "description": "Nesta aula sobre campo magnético, convidamos você a adentrar um universo repleto de forças invisíveis e fenômenos magnéticos. " 
+    },
+    {
+        "materia":"human",
+        "nomeMateria":"Humanas",
+        "title": " A Era Vargas",
+        "horaInicio": "11:45",
+        "horaFinal": "12:45",
+        "sala": "18",
+        "description": "Nesta aula envolvente sobre a Era Vargas, convidamos você a explorar um dos períodos mais marcantes da história do Brasil." 
+    }
+]

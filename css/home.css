@@ -74,13 +74,13 @@ main header .rank-header{
 
   display: flex;
   align-items: center;
-
 }
 
 .tasks {
   width: 20%;
   min-height: 100vh;
   min-width: 22.5rem;
+  position: fixed;
   
   display: flex;
   flex-direction: column;
@@ -418,15 +418,23 @@ main header .rank-header{
 
 .classes{
   width: 60%;
+  min-height: 100vh;
+  margin-left: 20%;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   background: var(--bg2-color);
+  padding-bottom: 40px;
 }
 .classes .calender-display{
+  width: 90%;
+  max-width: 990px;
+  
   display: flex;
   align-items: center;
+  flex-wrap: wrap-reverse;
   margin-top: 66px;
 
   padding: 5rem 0 5rem 5rem;
@@ -539,16 +547,116 @@ main header .rank-header{
   font-size: 2rem;
 }
 
-main .ranking{
-  width: 20%;
-  background-color: #282B30;
+.classes .lessons{
+  width: 90%;
+  max-width: 990px;
 
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
+  align-items: center;
+  gap: 40px;
+}
+.classes .lessons .lesson{
+  height: 120px;
+  width: 100%;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-left: 10px solid;
+  background-color: var(--bg1-color);
+  border-radius: 10px;
+  padding: 15px;
+}
+.classes .lessons .lesson .title-hour{
+  display: flex;
+  justify-content: space-between;
+}
+.classes .lessons .lesson .title-hour h2{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.classes .lessons .lesson .title-hour div{
+  font-size: 14px;
+  line-height: 17px;
+}
+.classes .lessons .lesson .lesson-description{
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.classes .lessons .lesson .lesson-description .room-description{
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+.classes .lessons .lesson .lesson-description .room-description .description{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 99%;
+  line-height: 100%;
+  text-align: justify;
+}
+.classes .lessons .lesson .lesson-description .discipline{
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.classes .lessons .lingua{
+  border-color: #38BAD7;
+}
+.classes .lessons .mate{
+  border-color: #D73838;
+}
+.classes .lessons .natu{
+  border-color: #30970B;
+}
+.classes .lessons .human{
+  border-color: #E08700;
+}
+
+
+.classes .lessons .lesson .lesson-description .discipline-lingua{
+  background-color: #38BAD7;
+}
+.classes .lessons .lesson .lesson-description .discipline-mate{
+  background-color: #D73838;
+}
+.classes .lessons .lesson .lesson-description .discipline-natu{
+  background-color: #30970B;
+}
+.classes .lessons .lesson .lesson-description .discipline-human{
+  background-color: #E08700;
+}
+
+main .ranking{
+  position: fixed;
+  width: 20%;
+  min-width: 23.5rem;
   min-height: 100vh;
-  min-width: 22.5rem;
+
+  
+  
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  top: 0;
+  right: 0;
+  background-color: #282B30;
 }
 
 main .ranking .leader{
@@ -614,4 +722,70 @@ main .ranking .ranking-names{
   flex-direction: column;
   justify-content: space-between;
   gap: 5px;
+}
+
+#icon-tasks, #icon-ranking{
+  display: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1530px){
+
+  .tasks{
+    display: none;
+  }
+  main .ranking{
+    display: none;
+  }
+  .classes{
+    width: 100%;
+    margin-left: 0;
+  }
+  #icon-tasks{
+    display: flex;
+  }
+  #icon-ranking{
+    display: flex;
+  }
+  main header .rank-header{
+    flex-direction: row-reverse;
+    padding-right: 20px;
+  }
+  main header div  h2{
+    display: none;
+  }
+  .classes .calender-display{
+    padding-left: 0;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 450px){
+  .classes .lessons .lesson {
+    height: 200px;
+  }
+  .classes .lessons .lesson .lesson-description{
+    flex-direction: column;
+    align-items: center;
+  }
+  .classes .lessons .lesson .lesson-description .discipline{
+    align-self: center;
+  }
+  .classes .calender-display .wrapper{
+    height: 370px;
+  }
+  .classes .calender-display .wrapper .calender .days li{
+    margin-top: 0;
+    height: 50px;
+  }
+}
+@media(max-width: 380px){
+  .classes .calender-display .wrapper{
+    height: 330px;
+  }
+  .classes .calender-display .wrapper .calender .days li{
+    height: 40px;
+  }
 }

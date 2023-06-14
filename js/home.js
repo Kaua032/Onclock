@@ -6,6 +6,7 @@ const paintBtn = document.getElementById("paint-btn");
 const paintPainel = document.getElementById('paint-painel');
 const perfilBtn = document.getElementById('perfil-btn');
 const profilePainel = document.getElementById('profile-painel');
+const logoutBtn = document.getElementById('logout-btn')
 
 
 /*Inputs Variables Change Colors */
@@ -35,28 +36,61 @@ const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Jul
 const completedAll = document.querySelectorAll('.completed .task-body');
 const uncompletedAll = document.querySelectorAll('.uncompleted .task-body');
 
-const todos = [
-  {
-    "title": "Estudar",
-    "done": false
-  },
-  {
-    "title": "Para",
-    "done": false
-  },
-  {
-    "title": "Prova",
-    "done": false
-  },
-  {
-    "title": "Sim",
-    "done": false
-  },
-  {
-    "title": "estudar para prova",
-    "done": false
+/* Variables Classes */
+const lessonsAll = document.getElementById('lessons');
+
+const borderLingua = document.querySelectorAll(".lingua");
+const borderMate = document.querySelectorAll(".mate");
+const borderNatu = document.querySelectorAll(".natu");
+const borderHuman = document.querySelectorAll(".human");
+
+
+/*Hamburguer Variables */
+const tasksBtn = document.querySelector('#icon-tasks');
+const sectionTasks = document.querySelector('#tasks');
+const rankingBtn = document.querySelector('#icon-ranking');
+const sectionRank = document.querySelector('#rank');
+
+
+logoutBtn.addEventListener('click', () =>{
+  window.location.href = "../pages/login.html"
+})
+
+tasksBtn.addEventListener("click", () => {
+  const computedDisplay = window.getComputedStyle(sectionTasks).getPropertyValue("display");
+  
+  if (computedDisplay === "flex") {
+    sectionTasks.style.display = "none";
+  } else if (computedDisplay === "none") {
+    sectionTasks.style.display = "flex";
   }
-];
+});
+
+rankingBtn.addEventListener("click", () => {
+  const computedDisplay = window.getComputedStyle(sectionRank).getPropertyValue("display");
+  
+  if (computedDisplay === "flex") {
+    sectionRank.style.display = "none";
+  } else if (computedDisplay === "none") {
+    sectionRank.style.display = "flex";
+  }
+});
+
+window.addEventListener("resize", function() {
+  const screenWidth = window.innerWidth;
+  
+  if (screenWidth >= 1530) {
+    sectionRank.style.display = "flex";
+    sectionTasks.style.display = "flex";
+  } else {
+    sectionRank.style.display = "none";
+    sectionTasks.style.display = "none";
+  }
+});
+
+
+
+const todos = [];
 
 // INITIAL TODOS
 generateTodo();
@@ -162,6 +196,12 @@ function exitPainel(name){
 
 linguagensColorInput.addEventListener('change', () => {
   bgLinguagens.style.backgroundColor = linguagensColorInput.value;
+
+  Array.prototype.forEach.call(borderLingua, element => {
+    element.style.borderColor = linguagensColorInput.value;
+    element.style.borderWidth = "10px";
+    element.style.borderStyle = "solid";
+  });
 });
 
 matematicaColorInput.addEventListener('change', () => {
@@ -190,7 +230,6 @@ const rederCalender = () => {
   let firstDayofMonth = new Date(currYear, currMonth, 1).getDay()
   let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
   let lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth ).getDay();
-  console.log(lastDayofMonth)
   let lastDateofLastMonth  = new Date(currYear, currMonth, 0).getDate()
   let liTag = "";
 
@@ -230,3 +269,30 @@ prevNextIcon.forEach(icon => {
     rederCalender();
   });
 });
+
+
+const fetchData = async () => {
+  await fetch("../classes.json").then((response) => response.json()).then((data) => {
+     data.map((value) => {
+          lessonsAll.innerHTML +=`
+          <div class="lesson ${value.materia}">
+            <div class="title-hour">
+              <h2>${value.title}</h2>
+              <div>
+                ${value.horaInicio} - ${value.horaFinal}
+              </div>
+            </div>
+            <div class="lesson-description">
+              <div class="room-description">
+                <p>Sala: ${value.sala}</p>
+                <p class="description">${value.description}</p>
+              </div>
+              <p class="discipline discipline-${value.materia}">${value.nomeMateria}</p>
+
+            </div>
+          </div>
+          `
+     })
+  });
+}
+fetchData()
