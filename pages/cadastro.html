@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/cadastro.css">
+    <title>OnClock - Sign up</title>
+</head>
+<body>
+    <main class="main">
+       <section class="intro">
+            <div class="intro-logo">
+                <h2>OnClock</h2>
+            </div>
+            <div class="intro-content">
+                <h2>Start your journey<br> with us.</h2>
+                <p>Discover a better world, increase productivity, creativity and much more.</p>
+            </div>
+       </section>
+
+       <section class="form">
+        <div class="form-header">
+            <h2>Sign up</h2>
+            <p>Already have an account <a href="./login.html">Sign in.</a></p>
+        </div>
+
+        <div class="form-inputs">
+            <label>
+                <p>Name</p>
+                <input type="text" id="name" placeholder="Ex: Joy Boy">
+            </label>
+
+            <label>
+                <p>Class</p>
+                <select id="school-class">
+                    <option value="default">Select the class</option>
+                    <optgroup label="Elementary School">
+                        <option value="7">7º grade class</option>
+                        <option value="8">8º grade class</option>
+                        <option value="9">9º grade class</option>
+                    </optgroup>
+                    <optgroup label="High school">
+                        <option value="1">1º grade class</option>
+                        <option value="2">2º grade class</option>
+                        <option value="3">3º grade class</option>
+                    </optgroup>
+                </select>
+            </label>
+
+            <label>
+                <p>Email</p>
+                <input type="email" id="email" placeholder="your@gmail.com">
+            </label>
+              
+            <label>
+                <p>Password</p>
+                <input type="password" id="password" placeholder="********">
+            </label>
+
+            <label>
+                <p>Confirm Password</p>
+                <input type="password" id="confirmPassword" placeholder="********">
+            </label>
+        </div>
+
+        <div>
+            <button id="register-button">Sign up</button>
+        </div>
+       </section>
+    </main>
+
+    <script src="../js/cadastro.js"></script>
+</body>
+</html>

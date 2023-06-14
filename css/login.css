@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    outline: none;
+}
+  
+body, html{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    color: var(--white-);
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    padding: 1rem;
+    background: linear-gradient(180deg, #333944 0%, #212328 81.77%);
+    background-repeat: no-repeat;
+}
+
+.main {
+    width: 900px;
+    max-width: 100%;
+    height: 700px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 2rem;
+    border-radius: .6rem;
+    background-color: #212328;
+}
+
+.main .intro {
+    width: 600px;
+    max-width: 100%;
+    height: 100%;
+
+    border-radius: .6rem;
+    background-color: #3a50a0;
+}
+
+.main .intro {
+    padding: 2rem;
+}
+
+.main .intro .intro-logo {
+    color: #fff;
+    font-size: 9pt;
+}
+
+.main .intro .intro-content h2 {
+    margin-top: 4rem;
+    
+    color: #fff;
+    font-size: 22pt;
+}
+
+.main .intro .intro-content p {
+    font-size: 17pt;
+    margin-top: 2rem;
+    color: #d7d7d7;
+}
+
+.main .form {
+    width: 100%;
+    height: 100%;
+
+    padding: 0rem 2rem;
+    padding-bottom: 3rem;
+    color: #fff;
+}
+
+.main .form {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.main .form .form-inputs {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.main .form .form-inputs label {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+
+    font-size: 14pt;
+}
+
+.main .form input {
+    width: 500px;
+    max-width: 100%;
+    padding: 1rem .6rem;
+
+    border-radius: .3rem;
+    border: 2px solid #9f9f9f;
+}
+
+.main .form .form-header h2 {
+    font-size: 28pt;
+}
+
+.main .form .form-header p {
+    margin-top: .4rem;
+    font-size: 14pt;
+}
+
+.main .form .form-header a {
+    color: #b4bfe8;
+    font-weight: 600;
+}
+
+.main .form .form-header a:hover {
+    transition: all 0.6s;
+    color: rgb(48, 70, 151);
+}
+
+.main .form input:focus {
+    border: 2px solid #3a4674;
+}
+
+.form button {
+    width: 200px;
+    max-width: 100%;
+    height: 4rem;
+
+    border: none;
+    border-radius: .4rem;
+    background-color: #3a50a0;
+
+    font-size: 14pt;
+    font-weight: 800;
+    color: #fff;
+
+    cursor: pointer;
+}
+
+.form button:hover {
+    transition: all 0.6s;
+    background-color: #26397f;
+}
