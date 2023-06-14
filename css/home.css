@@ -419,6 +419,7 @@ main header .rank-header{
 
 .classes{
   width: 60%;
+  min-height: 100vh;
   margin-left: 20%;
 
   display: flex;
@@ -623,6 +624,8 @@ main header .rank-header{
 .classes .lessons .human{
   border-color: #E08700;
 }
+
+
 .classes .lessons .lesson .lesson-description .discipline-lingua{
   background-color: #38BAD7;
 }

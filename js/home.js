@@ -35,9 +35,18 @@ const months = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio", "Junho", "Jul
 const completedAll = document.querySelectorAll('.completed .task-body');
 const uncompletedAll = document.querySelectorAll('.uncompleted .task-body');
 
-const todos = [
-  
-];
+/* Variables Classes */
+const lessonsAll = document.getElementById('lessons')
+
+const borderLingua = document.querySelectorAll(".lingua")
+const borderMate = document.querySelectorAll(".mate")
+const borderNatu = document.querySelectorAll(".natu")
+const borderHuman = document.querySelectorAll(".human")
+
+
+
+
+const todos = [];
 
 // INITIAL TODOS
 generateTodo();
@@ -143,6 +152,12 @@ function exitPainel(name){
 
 linguagensColorInput.addEventListener('change', () => {
   bgLinguagens.style.backgroundColor = linguagensColorInput.value;
+
+  Array.prototype.forEach.call(borderLingua, element => {
+    element.style.borderColor = linguagensColorInput.value;
+    element.style.borderWidth = "10px";
+    element.style.borderStyle = "solid";
+  });
 });
 
 matematicaColorInput.addEventListener('change', () => {
@@ -171,7 +186,6 @@ const rederCalender = () => {
   let firstDayofMonth = new Date(currYear, currMonth, 1).getDay()
   let lastDateofMonth = new Date(currYear, currMonth + 1, 0).getDate();
   let lastDayofMonth = new Date(currYear, currMonth, lastDateofMonth ).getDay();
-  console.log(lastDayofMonth)
   let lastDateofLastMonth  = new Date(currYear, currMonth, 0).getDate()
   let liTag = "";
 
@@ -211,3 +225,30 @@ prevNextIcon.forEach(icon => {
     rederCalender();
   });
 });
+
+
+const fetchData = async () => {
+  await fetch("../classes.json").then((response) => response.json()).then((data) => {
+     data.map((value) => {
+          lessonsAll.innerHTML +=`
+          <div class="lesson ${value.materia}">
+            <div class="title-hour">
+              <h2>${value.title}</h2>
+              <div>
+                ${value.horaInicio} - ${value.horaFinal}
+              </div>
+            </div>
+            <div class="lesson-description">
+              <div class="room-description">
+                <p>Sala: ${value.sala}</p>
+                <p class="description">${value.description}</p>
+              </div>
+              <p class="discipline discipline-${value.materia}">${value.nomeMateria}</p>
+
+            </div>
+          </div>
+          `
+     })
+  });
+}
+fetchData()
