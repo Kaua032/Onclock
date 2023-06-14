@@ -6,7 +6,7 @@ const loginBtn = document.querySelector("#login-button");
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
 window.addEventListener("DOMContentLoaded", () => {
-    if(localStorage.getItem("token")) return window.location.href = "../index.html";
+    if(localStorage.getItem("token")) return window.location.href = "https://kaua032.github.io/Onclock/pages/login.html";
 })
 
 loginBtn.addEventListener("click", () => {
@@ -21,5 +21,5 @@ loginBtn.addEventListener("click", () => {
 
     localStorage.setItem("token", "Authenticated");
     
-    return window.location.href = "../pages/home.html";
+    return window.location.href = "https://kaua032.github.io/Onclock/index.html";
 });

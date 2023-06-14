@@ -9,7 +9,7 @@ const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 console.log(schoolClass.value)
 
 window.addEventListener("DOMContentLoaded", () => {
-    if(localStorage.getItem("token")) return window.location.href = "../index.html";
+    if(localStorage.getItem("token")) return window.location.href = "https://kaua032.github.io/Onclock/index.html";
 })
 
 registerBtn.addEventListener("click", () => {
@@ -22,5 +22,5 @@ registerBtn.addEventListener("click", () => {
     if(password.value !== confirmPassword.value)
         return alert("As senhas são diferentes");
 
-    return window.location.href = "../pages/login.html";
+    return window.location.href = "https://kaua032.github.io/Onclock/pages/login.html";
 });

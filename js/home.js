@@ -28,7 +28,7 @@ const daysTag = document.querySelector(".days");
 const prevNextIcon = document.querySelectorAll(".icons span")
 
 window.addEventListener("DOMContentLoaded", () => {
-  if(!localStorage.getItem("token")) return window.location.href = "../pages/login.html"
+  if(!localStorage.getItem("token")) return window.location.href = "https://kaua032.github.io/Onclock/pages/login.html"
 });
 
 
