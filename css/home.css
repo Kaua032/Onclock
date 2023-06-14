@@ -81,6 +81,7 @@ main header .rank-header{
   width: 20%;
   min-height: 100vh;
   min-width: 22.5rem;
+  position: fixed;
   
   display: flex;
   flex-direction: column;
@@ -418,13 +419,18 @@ main header .rank-header{
 
 .classes{
   width: 60%;
+  margin-left: 20%;
 
   display: flex;
   flex-direction: column;
+  align-items: center;
 
   background: var(--bg2-color);
+  padding-bottom: 40px;
 }
 .classes .calender-display{
+  width: 90%;
+  
   display: flex;
   align-items: center;
   margin-top: 66px;
@@ -539,9 +545,102 @@ main header .rank-header{
   font-size: 2rem;
 }
 
+.classes .lessons{
+  width: 90%;
+  max-width: 990px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+.classes .lessons .lesson{
+  height: 120px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  border-left: 10px solid;
+  background-color: var(--bg1-color);
+  border-radius: 10px;
+  padding: 15px;
+}
+.classes .lessons .lesson .title-hour{
+  display: flex;
+  justify-content: space-between;
+}
+.classes .lessons .lesson .title-hour h2{
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+}
+.classes .lessons .lesson .title-hour div{
+  font-size: 14px;
+  line-height: 17px;
+}
+.classes .lessons .lesson .lesson-description{
+  display: flex;
+  justify-content: space-between;
+}
+.classes .lessons .lesson .lesson-description .room-description{
+  width: 80%;
+
+  display: flex;
+  flex-direction: column;
+
+  gap: 10px;
+}
+.classes .lessons .lesson .lesson-description .room-description .description{
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 100%;
+}
+.classes .lessons .lesson .lesson-description .discipline{
+  height: 20px;
+
+  display: flex;
+  align-items: center;
+  align-self: flex-end;
+
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.classes .lessons .lingua{
+  border-color: #38BAD7;
+}
+.classes .lessons .mate{
+  border-color: #D73838;
+}
+.classes .lessons .natu{
+  border-color: #30970B;
+}
+.classes .lessons .human{
+  border-color: #E08700;
+}
+.classes .lessons .lesson .lesson-description .discipline-lingua{
+  background-color: #38BAD7;
+}
+.classes .lessons .lesson .lesson-description .discipline-mate{
+  background-color: #D73838;
+}
+.classes .lessons .lesson .lesson-description .discipline-natu{
+  background-color: #30970B;
+}
+.classes .lessons .lesson .lesson-description .discipline-human{
+  background-color: #E08700;
+}
+
 main .ranking{
   width: 20%;
   background-color: #282B30;
+  position: fixed;
+  margin-left: 80%;
 
   display: flex;
   flex-direction: column;
@@ -615,3 +714,4 @@ main .ranking .ranking-names{
   justify-content: space-between;
   gap: 5px;
 }
+

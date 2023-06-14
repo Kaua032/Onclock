@@ -36,26 +36,7 @@ const completedAll = document.querySelectorAll('.completed .task-body');
 const uncompletedAll = document.querySelectorAll('.uncompleted .task-body');
 
 const todos = [
-  {
-    "title": "Estudar",
-    "done": false
-  },
-  {
-    "title": "Para",
-    "done": false
-  },
-  {
-    "title": "Prova",
-    "done": false
-  },
-  {
-    "title": "Sim",
-    "done": false
-  },
-  {
-    "title": "estudar para prova",
-    "done": false
-  }
+  
 ];
 
 // INITIAL TODOS
