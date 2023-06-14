@@ -10,6 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Poppins:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
         rel="stylesheet">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 
 
   <title>OnClock</title>
@@ -18,7 +19,8 @@
   <main>
     <header>
       <div class="tasks-header">
-        <h2>Lista de Tarefas</h2>
+        <h2 id="tasks-title">Lista de Tarefas</h2>
+        <span id="icon-tasks" class="material-symbols-outlined">menu</span>
       </div>
       <div class="classes-header">
         <h2>Horários</h2>
@@ -26,10 +28,11 @@
       </div>
       <div class="rank-header">
         <h2>Classificações</h2>
+        <span id="icon-ranking" class="material-symbols-outlined">menu</span>
       </div>
     </header>
 
-    <section class="tasks">
+    <section id="tasks" class="tasks">
 
       <div class="todo-create">
         <div class="todo-create-container" data-open="false">
@@ -152,7 +155,7 @@
       </div>
     </section>
 
-    <section class="ranking">
+    <section id="rank" class="ranking">
       <div class="leader">
         <img src="../assets/img/Leaser person.png" alt="">
 

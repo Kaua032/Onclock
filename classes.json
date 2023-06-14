@@ -6,7 +6,7 @@
         "horaInicio": "7:15",
         "horaFinal": "9:15",
         "sala": "16",
-        "description": "Nesta aula de Análise Combinatória, mergulharemos no fascinante mundo dos arranjos, permutações e combinações. A análise combinatória é uma poderosa ferramenta matemática que nos permite contar, organizar e analisar diferentes possibilidades em situações de contagem." 
+        "description": "Nesta aula de Análise Combinatória, mergulharemos no fascinante mundo dos arranjos, permutações e combinações." 
     },
     {
         "materia":"lingua",
@@ -15,7 +15,7 @@
         "horaInicio": "9:15",
         "horaFinal": "10:15",
         "sala": "11",
-        "description": "Nesta aula de Literatura Brasileira, convidamos você a mergulhar em um universo rico de palavras, sentimentos e reflexões. Exploraremos as principais obras e movimentos literários que moldaram a identidade literária do Brasil ao longo dos séculos." 
+        "description": "Nesta aula de Literatura Brasileira, convidamos você a mergulhar em um universo rico de palavras, sentimentos e reflexões." 
     },
     {
         "materia":"natu",
@@ -24,7 +24,7 @@
         "horaInicio": "10:45",
         "horaFinal": "11:45",
         "sala": "5",
-        "description": "Nesta aula sobre campo magnético, convidamos você a adentrar um universo repleto de forças invisíveis e fenômenos magnéticos. Aprenderemos sobre a natureza e propriedades do magnetismo, explorando como campos magnéticos são gerados e seu impacto em diversos aspectos da nossa vida cotidiana." 
+        "description": "Nesta aula sobre campo magnético, convidamos você a adentrar um universo repleto de forças invisíveis e fenômenos magnéticos. " 
     },
     {
         "materia":"human",
@@ -33,6 +33,6 @@
         "horaInicio": "11:45",
         "horaFinal": "12:45",
         "sala": "18",
-        "description": "Nesta aula envolvente sobre a Era Vargas, convidamos você a explorar um dos períodos mais marcantes da história do Brasil. Compreenderemos as transformações políticas, sociais e econômicas ocorridas durante o governo de Getúlio Vargas, que teve um impacto profundo na sociedade brasileira." 
+        "description": "Nesta aula envolvente sobre a Era Vargas, convidamos você a explorar um dos períodos mais marcantes da história do Brasil." 
     }
 ]

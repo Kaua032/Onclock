@@ -74,7 +74,6 @@ main header .rank-header{
 
   display: flex;
   align-items: center;
-
 }
 
 .tasks {
@@ -431,9 +430,11 @@ main header .rank-header{
 }
 .classes .calender-display{
   width: 90%;
+  max-width: 990px;
   
   display: flex;
   align-items: center;
+  flex-wrap: wrap-reverse;
   margin-top: 66px;
 
   padding: 5rem 0 5rem 5rem;
@@ -557,6 +558,7 @@ main header .rank-header{
 }
 .classes .lessons .lesson{
   height: 120px;
+  width: 100%;
 
   display: flex;
   flex-direction: column;
@@ -585,6 +587,7 @@ main header .rank-header{
 .classes .lessons .lesson .lesson-description{
   display: flex;
   justify-content: space-between;
+  gap: 20px;
 }
 .classes .lessons .lesson .lesson-description .room-description{
   width: 80%;
@@ -598,8 +601,9 @@ main header .rank-header{
   font-family: 'Poppins';
   font-style: normal;
   font-weight: 300;
-  font-size: 14px;
+  font-size: 99%;
   line-height: 100%;
+  text-align: justify;
 }
 .classes .lessons .lesson .lesson-description .discipline{
   height: 20px;
@@ -640,17 +644,19 @@ main header .rank-header{
 }
 
 main .ranking{
-  width: 20%;
-  background-color: #282B30;
   position: fixed;
-  margin-left: 80%;
+  width: 20%;
+  min-width: 23.5rem;
+  min-height: 100vh;
 
+  
+  
   display: flex;
   flex-direction: column;
   gap: 1.25rem;
-
-  min-height: 100vh;
-  min-width: 22.5rem;
+  top: 0;
+  right: 0;
+  background-color: #282B30;
 }
 
 main .ranking .leader{
@@ -718,3 +724,68 @@ main .ranking .ranking-names{
   gap: 5px;
 }
 
+#icon-tasks, #icon-ranking{
+  display: none;
+  cursor: pointer;
+}
+
+
+@media (max-width: 1530px){
+
+  .tasks{
+    display: none;
+  }
+  main .ranking{
+    display: none;
+  }
+  .classes{
+    width: 100%;
+    margin-left: 0;
+  }
+  #icon-tasks{
+    display: flex;
+  }
+  #icon-ranking{
+    display: flex;
+  }
+  main header .rank-header{
+    flex-direction: row-reverse;
+    padding-right: 20px;
+  }
+  main header div  h2{
+    display: none;
+  }
+  .classes .calender-display{
+    padding-left: 0;
+    justify-content: center;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 450px){
+  .classes .lessons .lesson {
+    height: 200px;
+  }
+  .classes .lessons .lesson .lesson-description{
+    flex-direction: column;
+    align-items: center;
+  }
+  .classes .lessons .lesson .lesson-description .discipline{
+    align-self: center;
+  }
+  .classes .calender-display .wrapper{
+    height: 370px;
+  }
+  .classes .calender-display .wrapper .calender .days li{
+    margin-top: 0;
+    height: 50px;
+  }
+}
+@media(max-width: 380px){
+  .classes .calender-display .wrapper{
+    height: 330px;
+  }
+  .classes .calender-display .wrapper .calender .days li{
+    height: 40px;
+  }
+}

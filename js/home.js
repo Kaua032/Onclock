@@ -6,6 +6,7 @@ const paintBtn = document.getElementById("paint-btn");
 const paintPainel = document.getElementById('paint-painel');
 const perfilBtn = document.getElementById('perfil-btn');
 const profilePainel = document.getElementById('profile-painel');
+const logoutBtn = document.getElementById('logout-btn')
 
 
 /*Inputs Variables Change Colors */
@@ -36,13 +37,56 @@ const completedAll = document.querySelectorAll('.completed .task-body');
 const uncompletedAll = document.querySelectorAll('.uncompleted .task-body');
 
 /* Variables Classes */
-const lessonsAll = document.getElementById('lessons')
+const lessonsAll = document.getElementById('lessons');
 
-const borderLingua = document.querySelectorAll(".lingua")
-const borderMate = document.querySelectorAll(".mate")
-const borderNatu = document.querySelectorAll(".natu")
-const borderHuman = document.querySelectorAll(".human")
+const borderLingua = document.querySelectorAll(".lingua");
+const borderMate = document.querySelectorAll(".mate");
+const borderNatu = document.querySelectorAll(".natu");
+const borderHuman = document.querySelectorAll(".human");
 
+
+/*Hamburguer Variables */
+const tasksBtn = document.querySelector('#icon-tasks');
+const sectionTasks = document.querySelector('#tasks');
+const rankingBtn = document.querySelector('#icon-ranking');
+const sectionRank = document.querySelector('#rank');
+
+
+logoutBtn.addEventListener('click', () =>{
+  window.location.href = "../pages/login.html"
+})
+
+tasksBtn.addEventListener("click", () => {
+  const computedDisplay = window.getComputedStyle(sectionTasks).getPropertyValue("display");
+  
+  if (computedDisplay === "flex") {
+    sectionTasks.style.display = "none";
+  } else if (computedDisplay === "none") {
+    sectionTasks.style.display = "flex";
+  }
+});
+
+rankingBtn.addEventListener("click", () => {
+  const computedDisplay = window.getComputedStyle(sectionRank).getPropertyValue("display");
+  
+  if (computedDisplay === "flex") {
+    sectionRank.style.display = "none";
+  } else if (computedDisplay === "none") {
+    sectionRank.style.display = "flex";
+  }
+});
+
+window.addEventListener("resize", function() {
+  const screenWidth = window.innerWidth;
+  
+  if (screenWidth >= 1530) {
+    sectionRank.style.display = "flex";
+    sectionTasks.style.display = "flex";
+  } else {
+    sectionRank.style.display = "none";
+    sectionTasks.style.display = "none";
+  }
+});
 
 
 
